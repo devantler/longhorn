@@ -1,0 +1,10 @@
+name: Validate the reusable backport contract
+on:
+  pull_request:
+    types: [opened]
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  ordinary-pr:
+    uses: ./.github/workflows/backport-pr.yml
